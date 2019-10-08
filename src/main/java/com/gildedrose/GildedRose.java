@@ -17,7 +17,10 @@ class GildedRose {
     private void decreaseQuality (Item item)
     {
 
-        item.quality--;
+        if (item.quality > 0)
+        {
+            item.quality--;
+        }
 
     }
 
@@ -28,12 +31,9 @@ class GildedRose {
             // Si l'objet courant n'est ni le brie, ni le pass et que sa qualité est supérieure a 0 alors il perd 1 de qualité sauf s'il s'agit de Ragnaros mais dans ce cas là on ignore aussi le else
 
             if (!items[i].name.equals("Aged Brie") && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                if (items[i].quality > 0)
+                if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) 
                 {
-                    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) 
-                    {
-                        decreaseQuality(items[i]);
-                    }
+                    decreaseQuality(items[i]);
                 }
             }
 
@@ -86,12 +86,9 @@ class GildedRose {
 
                         // Si la qualité de l'objet n'est pas a 0 et qu'il ne s'agit pas de Sulfuras alors il perd en qualité
 
-                        if (items[i].quality > 0)
+                        if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
                         {
-                            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
-                            {
-                                decreaseQuality(items[i]);;
-                            }
+                            decreaseQuality(items[i]);;
                         }
                     }
 
