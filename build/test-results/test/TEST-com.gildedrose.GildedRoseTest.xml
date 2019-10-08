@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2019-10-08T13:33:26" hostname="turing.local.isima.fr" time="0.006">
+  <properties/>
+  <testcase name="QualityUnder50BackstagePasses" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="QualityIncreaseAgedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityConstantForANegativeSellInSulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SellinStayConstantSulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityUnder50AgedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityAbove0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityNulOutOfDateBackstagePasses" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityIncreaseFasterAfterSellInAgedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SellInDecrease" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityAbove0AfterSellIn" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityDecreaseFasterAfterSellIn" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityAbove0AfterDecreasing" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityDecrease" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityIncreaseBackstagePasses10_" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityIncreaseBackstagePasses0_5" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityUnder50WhenSellInUnder0AgedBrie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="QualityDecreaseFasterWhenConjured" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityIncreaseBackstagePasses5_10" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityUnder50AfterIncreasingBackstagePasses" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="QualityConstantForAPositiveSellInSulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
