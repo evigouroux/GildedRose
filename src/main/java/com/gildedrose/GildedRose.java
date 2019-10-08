@@ -7,9 +7,17 @@ class GildedRose {
         this.items = items;
     }
 
-    private void increaseQuality (Item item){
+    private void increaseQuality (Item item)
+    {
 
         item.quality++;
+
+    }
+
+    private void decreaseQuality (Item item)
+    {
+
+        item.quality--;
 
     }
 
@@ -21,7 +29,7 @@ class GildedRose {
                 {
                     if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) 
                     {
-                        items[i].quality = items[i].quality - 1;
+                        decreaseQuality(items[i]);
                     }
                 }
             }
@@ -67,7 +75,7 @@ class GildedRose {
                         {
                             if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
                             {
-                                items[i].quality = items[i].quality - 1;
+                                decreaseQuality(items[i]);;
                             }
                         }
                     }
