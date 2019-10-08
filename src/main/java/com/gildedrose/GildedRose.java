@@ -10,7 +10,10 @@ class GildedRose {
     private void increaseQuality (Item item)
     {
 
-        item.quality++;
+        if (item.quality < 50)
+        {
+            item.quality++;
+        }
 
     }
 
@@ -43,27 +46,18 @@ class GildedRose {
 
             else
             {
-                if (items[i].quality < 50)
+                increaseQuality(items[i]);
+
+                if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert"))
                 {
-                    increaseQuality(items[i]);
-
-                    if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert"))
+                    if (items[i].sellIn < 11)
                     {
-                        if (items[i].sellIn < 11)
-                        {
-                            if (items[i].quality < 50)
-                            {
-                                increaseQuality(items[i]);
-                            }
-                        }
+                        increaseQuality(items[i]);
+                    }
 
-                        if (items[i].sellIn < 6)
-                        {
-                            if (items[i].quality < 50)
-                            {
-                                increaseQuality(items[i]);
-                            }
-                        }
+                    if (items[i].sellIn < 6)
+                    {
+                        increaseQuality(items[i]);
                     }
                 }
             }
@@ -104,10 +98,7 @@ class GildedRose {
 
                 else
                 {
-                    if (items[i].quality < 50)
-                    {
-                        increaseQuality(items[i]);
-                    }
+                    increaseQuality(items[i]);
                 }
             }
         }
