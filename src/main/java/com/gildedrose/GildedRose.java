@@ -13,12 +13,12 @@ class GildedRose {
         this.items = items;
     }
 
-    private void increaseQuality (Item item)
+    private void increaseQualityBy (Item item, int increase)
     {
 
         if (item.quality < MAX_QUALITY)
         {
-            item.quality++;
+            item.quality += increase;
         }
 
     }
@@ -30,12 +30,12 @@ class GildedRose {
 
     }
 
-    private void decreaseQuality (Item item)
+    private void decreaseQualityBy (Item item, int decrease)
     {
 
         if (item.quality > MIN_QUALITY)
         {
-            item.quality--;
+            item.quality -= decrease;
         }
 
     }
@@ -49,7 +49,7 @@ class GildedRose {
             if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 if (!item.name.equals("Sulfuras, Hand of Ragnaros")) 
                 {
-                    decreaseQuality(item);
+                    decreaseQualityBy(item, 1);
                 }
             }
 
@@ -59,18 +59,18 @@ class GildedRose {
 
             else
             {
-                increaseQuality(item);
+                increaseQualityBy(item, 1);
 
                 if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
                 {
                     if (item.sellIn <= CONCERT_GETS_NEAR)
                     {
-                        increaseQuality(item);
+                        increaseQualityBy(item, 1);
                     }
 
                     if (item.sellIn <= CONCERT_GETS_VERY_NEAR)
                     {
-                        increaseQuality(item);
+                        increaseQualityBy(item, 1);
                     }
                 }
             }
@@ -95,7 +95,7 @@ class GildedRose {
 
                         if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
                         {
-                            decreaseQuality(item);;
+                            decreaseQualityBy(item, 1);
                         }
                     }
 
@@ -111,7 +111,7 @@ class GildedRose {
 
                 else
                 {
-                    increaseQuality(item);
+                    increaseQualityBy(item, 1);
                 }
             }
         }
