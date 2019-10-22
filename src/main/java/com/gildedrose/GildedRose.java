@@ -1,7 +1,13 @@
 package com.gildedrose;
 
 class GildedRose {
+
     Item[] items;
+    private static final int MIN_QUALITY = 0;
+    private static final int MAX_QUALITY = 50;
+    private static final int MIN_SELLIN = 0;
+    private static final int CONCERT_GETS_NEAR = 10;
+    private static final int CONCERT_GETS_VERY_NEAR = 5;
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -10,7 +16,7 @@ class GildedRose {
     private void increaseQuality (Item item)
     {
 
-        if (item.quality < 50)
+        if (item.quality < MAX_QUALITY)
         {
             item.quality++;
         }
@@ -27,7 +33,7 @@ class GildedRose {
     private void decreaseQuality (Item item)
     {
 
-        if (item.quality > 0)
+        if (item.quality > MIN_QUALITY)
         {
             item.quality--;
         }
@@ -57,12 +63,12 @@ class GildedRose {
 
                 if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
                 {
-                    if (item.sellIn < 11)
+                    if (item.sellIn <= CONCERT_GETS_NEAR)
                     {
                         increaseQuality(item);
                     }
 
-                    if (item.sellIn < 6)
+                    if (item.sellIn <= CONCERT_GETS_VERY_NEAR)
                     {
                         increaseQuality(item);
                     }
@@ -78,7 +84,7 @@ class GildedRose {
 
             // Objet périmé
 
-            if (item.sellIn < 0) 
+            if (item.sellIn < MIN_SELLIN) 
             {
                 if (!item.name.equals("Aged Brie")) 
                 {
