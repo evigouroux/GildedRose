@@ -35,15 +35,15 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        for (int i = 0; i < items.length; i++)
+        for (Item item : items)
         {
 
             // Si l'objet courant n'est ni le brie, ni le pass et que sa qualité est supérieure a 0 alors il perd 1 de qualité sauf s'il s'agit de Ragnaros mais dans ce cas là on ignore aussi le else
 
-            if (!items[i].name.equals("Aged Brie") && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) 
+            if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+                if (!item.name.equals("Sulfuras, Hand of Ragnaros")) 
                 {
-                    decreaseQuality(items[i]);
+                    decreaseQuality(item);
                 }
             }
 
@@ -53,43 +53,43 @@ class GildedRose {
 
             else
             {
-                increaseQuality(items[i]);
+                increaseQuality(item);
 
-                if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert"))
+                if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
                 {
-                    if (items[i].sellIn < 11)
+                    if (item.sellIn < 11)
                     {
-                        increaseQuality(items[i]);
+                        increaseQuality(item);
                     }
 
-                    if (items[i].sellIn < 6)
+                    if (item.sellIn < 6)
                     {
-                        increaseQuality(items[i]);
+                        increaseQuality(item);
                     }
                 }
             }
 
             // Si l'objet n'est pas sulfuras alors il vieillis
 
-            if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
+            if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
             {
-                decreaseSellIn(items[i]);
+                decreaseSellIn(item);
             }
 
             // Objet périmé
 
-            if (items[i].sellIn < 0) 
+            if (item.sellIn < 0) 
             {
-                if (!items[i].name.equals("Aged Brie")) 
+                if (!item.name.equals("Aged Brie")) 
                 {
-                    if (!items[i].name.equals("Backstage passes to a TAFKAL80ETC concert"))
+                    if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
                     {
 
                         // Si la qualité de l'objet n'est pas a 0 et qu'il ne s'agit pas de Sulfuras alors il perd en qualité
 
-                        if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
+                        if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
                         {
-                            decreaseQuality(items[i]);;
+                            decreaseQuality(item);;
                         }
                     }
 
@@ -97,7 +97,7 @@ class GildedRose {
 
                     else
                     {
-                        items[i].quality = items[i].quality - items[i].quality;
+                        item.quality = item.quality - item.quality;
                     }
                 }
 
@@ -105,7 +105,7 @@ class GildedRose {
 
                 else
                 {
-                    increaseQuality(items[i]);
+                    increaseQuality(item);
                 }
             }
         }
