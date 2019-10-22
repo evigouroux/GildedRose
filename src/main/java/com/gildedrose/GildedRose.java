@@ -17,6 +17,13 @@ class GildedRose {
 
     }
 
+    private void decreaseSellIn (Item item)
+    {
+
+        item.sellIn--;
+
+    }
+
     private void decreaseQuality (Item item)
     {
 
@@ -66,7 +73,7 @@ class GildedRose {
 
             if (!items[i].name.equals("Sulfuras, Hand of Ragnaros"))
             {
-                items[i].sellIn = items[i].sellIn - 1;
+                decreaseSellIn(items[i]);
             }
 
             // Objet périmé
