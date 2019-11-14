@@ -17,39 +17,6 @@ class GildedRose {
         this.items = items;
     }
 
-    private void increaseQualityBy (Item item, int increase)
-    {
-
-        if (item.quality < MAX_QUALITY)
-        {
-            item.quality += increase;
-        }
-
-    }
-
-    private void qualityCrashes (Item item)
-    {
-
-            item.quality = 0;
-    }
-
-    private void decreaseSellIn (Item item)
-    {
-
-        item.sellIn--;
-
-    }
-
-    private void decreaseQualityBy (Item item, int decrease)
-    {
-
-        if (item.quality > MIN_QUALITY)
-        {
-            item.quality -= decrease;
-        }
-
-    }
-
     public void updateQuality() {
         
         UpdaterFactory updaterFactory = new UpdaterFactory;
