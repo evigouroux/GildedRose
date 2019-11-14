@@ -23,6 +23,12 @@ class GildedRose {
 
     }
 
+    private void qualityCrashes (Item item)
+    {
+
+            item.quality = 0;
+    }
+
     private void decreaseSellIn (Item item)
     {
 
