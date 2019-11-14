@@ -1,12 +1,7 @@
 package com.gildedrose;
 
-public class LegendaryUpdater
+public class LegendaryUpdater implements Updater
 {
 
-   public LegendaryItem (String name, int sellIn, int quality) {
-        this.name = name;
-        this.sellIn = sellIn;
-        this.quality = quality;
-    }
 
 }
