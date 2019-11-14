@@ -45,6 +45,24 @@ class GildedRose {
         for (Item item : items)
         {
 
+            if (item.name.equals("Aged Brie") {
+
+
+
+            }
+
+            if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+
+
+
+            }
+
+            if (item.name.equals("Sulfuras, Hand of Ragnaros")){
+
+
+                
+            }
+
             // Si l'objet courant n'est ni le brie, ni le pass et que sa qualité est supérieure a 0 alors il perd 1 de qualité sauf s'il s'agit de Ragnaros mais dans ce cas là on ignore aussi le else
 
             if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
