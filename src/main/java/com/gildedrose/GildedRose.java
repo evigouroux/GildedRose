@@ -70,6 +70,7 @@ class GildedRose {
                 if (item.sellIn < MIN_SELLIN)
                 {
                     
+                    qualityCrashes(item);
 
                 }
                 else if (item.sellIn <= CONCERT_GETS_NEAR){
@@ -94,33 +95,15 @@ class GildedRose {
             else if (item.name.equals("Sulfuras, Hand of Ragnaros")){}
             else {
 
-                decreaseQualityBy(item, 1);
+                if (item.sellIn < MIN_SELLIN){
 
-            }
+                    decreaseQualityBy(item, 2);
 
-            // Objet périmé
+                }
+                else {
 
-            if (item.sellIn < MIN_SELLIN) 
-            {
-                if (!item.name.equals("Aged Brie")) 
-                {
-                    if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
-                    {
+                    decreaseQualityBy(item, 1);
 
-                        // Si la qualité de l'objet n'est pas a 0 et qu'il ne s'agit pas de Sulfuras alors il perd en qualité
-
-                        if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
-                        {
-                            decreaseQualityBy(item, 1);
-                        }
-                    }
-
-                    // Si l'objet est un pass alors sa qualité passe a 0
-
-                    else
-                    {
-                        item.quality = item.quality - item.quality;
-                    }
                 }
 
 
