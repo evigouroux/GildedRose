@@ -60,68 +60,7 @@ class GildedRose {
             Updater updater = updaterFactory.getUpdater(item);
             
             updater.update(item);
-
-            if (item.name.equals(AGED_BRIE) {
-
-                decreaseSellIn(item);
-
-                if (item.sellIn < MIN_SELLIN){
-
-                    increaseQualityBy(item, 2);
-                }
-                else{
-
-                    increaseQualityBy(item, 1);
-                }
-
-            }
-            else if (item.name.equals(BACKSTAGE_PASSES)) {
-
-                decreaseSellIn(item);
-
-                if (item.sellIn < MIN_SELLIN)
-                {
-                    
-                    qualityCrashes(item);
-
-                }
-                else if (item.sellIn <= CONCERT_GETS_NEAR){
-
-                    increaseQualityBy(item,2);
-
-                }
-                else if (item.sellIN <= CONCERTS_GETS_VERY_NEAR)
-                {
-
-                    increaseQualityBy(item,3);
-
-                }
-                else
-                {
-
-                    increaseQualityBy(item,1);
-
-                }
-
-            }
-            else if (item.name.equals(SULFURAS)){}
-            else {
-
-                decreaseSellIn(item);
-
-                if (item.sellIn < MIN_SELLIN){
-
-                    decreaseQualityBy(item, 2);
-
-                }
-                else {
-
-                    decreaseQualityBy(item, 1);
-
-                }
-
-
-            }
+           
         }
     }
 }
