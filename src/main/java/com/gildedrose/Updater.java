@@ -1,8 +1,8 @@
 package com.gildedrose;
 
-public class Updater
+public interface Updater
 {
 
-       public void Update (Item item);
+    public void Update (Item item);
 
 }
