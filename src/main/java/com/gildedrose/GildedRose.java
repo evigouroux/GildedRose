@@ -9,6 +9,10 @@ class GildedRose {
     private static final int CONCERT_GETS_NEAR = 10;
     private static final int CONCERT_GETS_VERY_NEAR = 5;
 
+    private static final String AGED_BRIE = "Aged Brie";
+    private static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
+    private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";    
+
     public GildedRose(Item[] items) {
         this.items = items;
     }
@@ -51,7 +55,7 @@ class GildedRose {
         for (Item item : items)
         {
 
-            if (item.name.equals("Aged Brie") {
+            if (item.name.equals(AGED_BRIE) {
 
                 decreaseSellIn(item);
 
@@ -65,7 +69,7 @@ class GildedRose {
                 }
 
             }
-            else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            else if (item.name.equals(BACKSTAGE_PASSES)) {
 
                 if (item.sellIn < MIN_SELLIN)
                 {
@@ -92,7 +96,7 @@ class GildedRose {
                 }
 
             }
-            else if (item.name.equals("Sulfuras, Hand of Ragnaros")){}
+            else if (item.name.equals(SULFURAS)){}
             else {
 
                 if (item.sellIn < MIN_SELLIN){
