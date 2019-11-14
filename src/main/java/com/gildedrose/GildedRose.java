@@ -52,8 +52,14 @@ class GildedRose {
 
     public void updateQuality() {
         
+        UpdaterFactory updaterFactory = new UpdaterFactory;
+
         for (Item item : items)
         {
+
+            Updater updater = updaterFactory.getUpdater(item);
+            
+            updater.update(item);
 
             if (item.name.equals(AGED_BRIE) {
 
