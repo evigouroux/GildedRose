@@ -71,6 +71,8 @@ class GildedRose {
             }
             else if (item.name.equals(BACKSTAGE_PASSES)) {
 
+                decreaseSellIn(item);
+
                 if (item.sellIn < MIN_SELLIN)
                 {
                     
@@ -98,6 +100,8 @@ class GildedRose {
             }
             else if (item.name.equals(SULFURAS)){}
             else {
+
+                decreaseSellIn(item);
 
                 if (item.sellIn < MIN_SELLIN){
 

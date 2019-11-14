@@ -5,8 +5,6 @@ public class ImprovedWithAgeUpdater implements Updater
 
     public void Update (Item item) {
 
-        decreaseSellIn(item);
-
         item.sellIn --;
 
         if (item.SellIn(item) < 0){
@@ -16,7 +14,7 @@ public class ImprovedWithAgeUpdater implements Updater
         }
         else {
 
-            item.quality += 1;
+            item.quality ++;
 
         }
 
